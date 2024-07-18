@@ -18,7 +18,7 @@ public class BaseTest {
         Configuration.browserSize = System.getProperty("browser_size", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("version", "121");
-        Configuration.baseUrl = System.getProperty("stand", "https://www.x5.ru/");
+        Configuration.baseUrl = System.getProperty("stand", "https://www.x5.ru");
 
         Configuration.remote= System.getProperty("remote_browser");
 
@@ -30,6 +30,7 @@ public class BaseTest {
         Configuration.browserCapabilities = capabilities;
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
     }
 
     @AfterEach
