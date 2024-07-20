@@ -53,10 +53,21 @@ compileTestJava {
 }
 
 
-
-task smoke(type: Test) {
+task MainPage(type: Test) {
     useJUnitPlatform {
-        includeTags("smoke")
+        includeTags("MainPage")
+    }
+}
+
+task AboutPage(type: Test) {
+    useJUnitPlatform {
+        includeTags("AboutPage")
+    }
+}
+
+task CareerPage(type: Test) {
+    useJUnitPlatform {
+        includeTags("CareerPage")
     }
 }
 
