@@ -20,7 +20,7 @@ public class BaseTest {
         Configuration.browserVersion = System.getProperty("version", "121");
         Configuration.baseUrl = System.getProperty("stand", "https://www.x5.ru");
 
-        Configuration.remote= System.getProperty("remote_browser");
+        Configuration.remote = System.getProperty("remote_browser");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -43,4 +43,5 @@ public class BaseTest {
         Attach.addVideo();
         Selenide.closeWebDriver();
     }
+
 }
