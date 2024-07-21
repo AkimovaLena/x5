@@ -12,7 +12,7 @@ import pages.MainPage;
 import tests.data.Language;
 
 
-public class xTest extends BaseTest {
+public class xFiveTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
     AboutPage aboutPage = new AboutPage();
