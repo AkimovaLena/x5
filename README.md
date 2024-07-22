@@ -1,5 +1,5 @@
 # Домашнее задание к уроку 14 - автоматические тесты для [**x5**](https://www.x5.ru/)
-<img width="6%" title="IntelliJ IDEA" src="media/logo/x5Group.svg">
+<img width="10%" title="IntelliJ IDEA" src="media/logo/x5Group.svg">
 
 
 ## 	:compass: Содержание:
