@@ -1,7 +1,7 @@
 package tests;
 
 import com.google.common.collect.Lists;
-import io.qameta.allure.Story;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -24,7 +24,7 @@ public class xFiveTest extends BaseTest {
     @ParameterizedTest(name = "Переключение языка {0}")
     @EnumSource(Language.class)
     @Tag("MainPage")
-    @Story("Главная страница")
+    @Feature("Главная страница")
     void switchLanguageTest(Language language) {
         mainPage.openPage("/" + language.another().nameLower() + "/");
         mainPage.logoClick()
@@ -34,7 +34,7 @@ public class xFiveTest extends BaseTest {
                 .tagline(language.description);
     }
 
-    @Story("Главная страница")
+    @Feature("Главная страница")
     @Tag("MainPage")
     @ValueSource(strings = {
             "Компания", "Партнёрам", "Акционерам и инвесторам", "Пресс-центр"
@@ -47,7 +47,7 @@ public class xFiveTest extends BaseTest {
                 .activeTab(nameTab);
     }
 
-    @Story("Главная страница")
+    @Feature("Главная страница")
     @Test
     @Tag("MainPage")
     @DisplayName("Проверка наличия всех элементов в футере")
@@ -64,7 +64,7 @@ public class xFiveTest extends BaseTest {
 
     @Test
     @Tag("AboutPage")
-    @Story("Страница Компания")
+    @Feature("Страница Компания")
     @DisplayName("Проверка наличия элементов на странице")
     void aboutTest() {
         aboutPage.openPage("/ru/about/");
@@ -78,7 +78,7 @@ public class xFiveTest extends BaseTest {
 
     @Test
     @Tag("CareerPage")
-    @Story("Страница Карьера")
+    @Feature("Страница Карьера")
     @DisplayName("Проверка наличия элементов на странице")
     void careerTest() {
         careerPage.openPage("/ru/career/");
