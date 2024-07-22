@@ -1,8 +1,8 @@
 # Домашнее задание к уроку 14 - автоматические тесты для [**x5**](https://www.x5.ru/)
-<img width="10%" title="IntelliJ IDEA" src="media/logo/x5Group.svg">
+<img width="30%" title="IntelliJ IDEA" src="media/logo/x5Group.svg">
 
 
-## 	:compass: Содержание:
+## 	:world_map: Содержание:
 
 - [Используемый стек](#computer-используемый-стек)
 - [Описание автотестов](#pushpin-описание-тестов)
