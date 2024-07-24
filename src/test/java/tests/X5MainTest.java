@@ -11,7 +11,7 @@ import pages.MainPage;
 import tests.data.Language;
 
 @DisplayName("Главная страница")
-public class xFiveMainTest extends BaseTest {
+public class X5MainTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
 
@@ -20,11 +20,11 @@ public class xFiveMainTest extends BaseTest {
     @Tag("MainPage")
     void switchLanguageTest(Language language) {
         mainPage.openPage("/" + language.another().nameLower() + "/");
-        mainPage.logoClick()
-                .langName(language.name())
-                .langSwitcher()
-                .langName(language.another().name())
-                .tagline(language.description);
+        mainPage.clickLogo()
+                .checkLangName(language.name())
+                .switcherLang()
+                .checkLangName(language.another().name())
+                .checklangLogo(language.description);
     }
 
     @Tag("MainPage")
@@ -32,24 +32,24 @@ public class xFiveMainTest extends BaseTest {
             "Компания", "Партнёрам", "Акционерам и инвесторам", "Пресс-центр"
     })
     @ParameterizedTest(name = "Наведение на вкладку {0}")
-    void howerTabsTest(String nameTab) {
+    void hoverTabsTest(String nameTab) {
 
         mainPage.openPage("/ru/");
         mainPage.hoverTab(nameTab)
-                .activeTab(nameTab);
+                .checkActiveTab(nameTab);
     }
 
     @Test
     @Tag("MainPage")
     @DisplayName("Проверка наличия всех элементов в футере")
-    void footerTest() {
+    void checkFooterTest() {
 
         mainPage.openPage("/ru/");
-        mainPage.footerExist()
-                .footerLogo("https://www.x5.ru/wp-content/themes/x5/assets/img/colorLogo.svg")
-                .footerPhone(Lists.newArrayList("+7 495 662 88 88", "+7 495 789 95 95"))
-                .footerAddress("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1")
-                .footerDate("© 2015-2024 ПАО «Корпоративный центр ИКС 5»");
+        mainPage.checkFooterExist()
+                .checkFooterLogo("https://www.x5.ru/wp-content/themes/x5/assets/img/colorLogo.svg")
+                .checkFooterPhone(Lists.newArrayList("+7 495 662 88 88", "+7 495 789 95 95"))
+                .checkFooterAddress("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1")
+                .checkFooterDate("© 2015-2024 ПАО «Корпоративный центр ИКС 5»");
 
     }
 

@@ -24,25 +24,25 @@ public class MainPage extends BasePage {
     ;
 
     @Step("Клик по логотипу")
-    public MainPage logoClick() {
+    public MainPage clickLogo() {
         logo.click();
         return this;
     }
 
     @Step("Проверка, что кнопка переключения языка имеет название {0}")
-    public MainPage langName(String value) {
+    public MainPage checkLangName(String value) {
         langSwitcher.shouldHave(text(value));
         return this;
     }
 
-    @Step("Проверка, что слоган переведен на соответствующий язык")
-    public MainPage langSwitcher() {
+    @Step("Переключение языка")
+    public MainPage switcherLang() {
         langSwitcher.click();
         return this;
     }
 
     @Step("Проверка, что слоган переведен на соответствующий язык")
-    public MainPage tagline(String value) {
+    public MainPage checklangLogo(String value) {
         mainLogo.shouldHave(attribute("alt", value));
         return this;
     }
@@ -54,37 +54,37 @@ public class MainPage extends BasePage {
     }
 
     @Step("Проверка вывода меню таба {0}")
-    public MainPage activeTab(String value) {
+    public MainPage checkActiveTab(String value) {
         headerActive.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверка, что футер выводится")
-    public MainPage footerExist() {
+    public MainPage checkFooterExist() {
         footer.should(exist);
         return this;
     }
 
     @Step("Проверка, что футер сожержит логотим {0}")
-    public MainPage footerLogo(String value) {
+    public MainPage checkFooterLogo(String value) {
         footer.$("img").shouldHave(attribute("src", value));
         return this;
     }
 
     @Step("Проверка, что в футере блок  Корпоративный центр содержит телефоны {0}")
-    public MainPage footerPhone(List<String> value) {
+    public MainPage checkFooterPhone(List<String> value) {
         footerPhone.$$(".footer__info-item").shouldHave(textsInAnyOrder(value));
         return this;
     }
 
     @Step("Проверка, что в футере блок  Адрес содержит {0}")
-    public MainPage footerAddress(String value) {
+    public MainPage checkFooterAddress(String value) {
         footerAddressInfo.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверка, что в футере есть блок  копирайт с данными  {0}")
-    public MainPage footerDate(String value) {
+    public MainPage checkFooterDate(String value) {
         footerDate.shouldHave(text(value));
         return this;
     }

@@ -19,25 +19,25 @@ public class CareerPage extends BasePage{
     private final  ElementsCollection benefitsTitle =  $$(".benefits__title");
 
     @Step("Проверка, что страница имеет заголовок {0}")
-    public CareerPage titlePage(String value) {
+    public CareerPage checkCareerHeader(String value) {
         title.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверка, что баннер имеет заголовок {0}")
-    public CareerPage headerBanner(String value) {
+    public CareerPage checkHeaderBanner(String value) {
         headerBanner.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверка, что баннер имеет слоган {0}")
-    public CareerPage contentBanner(String value) {
+    public CareerPage checkContentBanner(String value) {
         contentBanner.shouldHave(text(value));
         return this;
     }
 
     @Step("Проверка, что содержится список преимуществ")
-    public CareerPage benefitsTitle(List<String> value) {
+    public CareerPage checkBenefitsTitle(List<String> value) {
         benefitsTitle.shouldHave(texts(value));
         return this;
     }
