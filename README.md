@@ -59,16 +59,22 @@ gradle clean test  запуск всех тестов
 gradle clean main_page  запуск тестов, которые проверяют главную страницу
 gradle clean about_page запуск тестов, которые проверяют главную страницу Компания
 gradle clean career_page запуск тестов, которые проверяют главную страницу Карьера
+
+clean ${task}
+-DbrowserSize=${browserSize}
+-DbaseUrl=${baseUrl}
+-DbrowserVersion=${browserVersion}
+-Dbrowser=${browser}
 ```
 
 ### Запуск тестов на удаленном браузере
 ```
 clean ${task}
--Dbrowser_size=${browser_size}
--Dstand=${stand}
--Dversion=${version}
+-DbrowserSize=${browserSize}
+-DbaseUrl=${baseUrl}
+-DbrowserVersion=${browserVersion}
 -Dbrowser=${browser}
--Dremote_browser=https://user1:1234@${remote_browser}/wd/hub
+-DisRemote=true
 ```
 ###  Параметры сборки в Jenkins:
 - task (набор тестов для запуска)
