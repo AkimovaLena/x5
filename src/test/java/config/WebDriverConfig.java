@@ -4,12 +4,14 @@ import org.aeonbits.owner.Config;
 
 import java.net.URL;
 
+@Config.Sources({
+        "classpath:${env}.properties"
+})
 public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")
     @DefaultValue("https://www.x5.ru")
     URL getBaseUrl();
-
 
     @Key("browser")
     @DefaultValue("CHROME")
