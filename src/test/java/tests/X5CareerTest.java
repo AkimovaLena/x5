@@ -1,8 +1,10 @@
 package tests;
 
 import com.google.common.collect.Lists;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.CareerPage;
 
@@ -13,7 +15,8 @@ public class X5CareerTest extends BaseTest {
 
 
     @Test
-    @Tag("CareerPage")
+    @Owner("Akimova")
+    @Tags({@Tag("ui"), @Tag("CareerPage")})
     @DisplayName("Проверка наличия элементов на странице")
     void checkCareerTest() {
         careerPage.openPage("/ru/career/");

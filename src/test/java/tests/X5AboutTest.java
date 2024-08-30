@@ -1,7 +1,9 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.AboutPage;
 
@@ -12,7 +14,8 @@ public class X5AboutTest extends BaseTest {
 
 
     @Test
-    @Tag("AboutPage")
+    @Owner("Akimova")
+    @Tags({@Tag("ui"), @Tag("AboutPage")})
     @DisplayName("Проверка наличия элементов на странице")
     void checkAboutTest() {
         aboutPage.openPage("/ru/about/");

@@ -1,8 +1,10 @@
 package tests;
 
 import com.google.common.collect.Lists;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -17,7 +19,8 @@ public class X5MainTest extends BaseTest {
 
     @ParameterizedTest(name = "Переключение языка {0}")
     @EnumSource(Language.class)
-    @Tag("MainPage")
+    @Owner("Akimova")
+    @Tags({@Tag("ui"), @Tag("MainPage")})
     void switchLanguageTest(Language language) {
         mainPage.openPage("/" + language.another().nameLower() + "/");
         mainPage.clickLogo()
@@ -27,7 +30,8 @@ public class X5MainTest extends BaseTest {
                 .checklangLogo(language.description);
     }
 
-    @Tag("MainPage")
+    @Owner("Akimova")
+    @Tags({@Tag("ui"), @Tag("MainPage")})
     @ValueSource(strings = {
             "Компания", "Партнёрам", "Акционерам и инвесторам", "Пресс-центр"
     })
@@ -40,7 +44,8 @@ public class X5MainTest extends BaseTest {
     }
 
     @Test
-    @Tag("MainPage")
+    @Owner("Akimova")
+    @Tags({@Tag("ui"), @Tag("MainPage")})
     @DisplayName("Проверка наличия всех элементов в футере")
     void checkFooterTest() {
 
